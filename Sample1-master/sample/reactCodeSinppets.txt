@@ -1,0 +1,107 @@
+ 4
+ {React.cloneElement(this.props.children,this.props)}
+
+ ----------------------------------------------------------------
+   onDelete=(index)=>()=>{
+         let temp = this.state.storeArray.filter((value,inde,arr)=> value!=arr[index] );
+        this.setState({storeArray:temp});
+    }
+
+
+     <ul>
+                    {this.state.storeArray.map((value, index) =>
+                        <li key={index}> {value}
+                            <input type="button" onClick={this.onDelete(index)} 
+                            value="delete" />
+                            
+                        </li>)}
+
+                        
+     </ul>
+
+ ----------------------------------------------------------------
+ function mapStateToProps(state, ownProps) {
+    return ({ courses: state.courses });
+}
+function mapDispatchToProps(dispatch){
+    return({
+       // createCourse : course => {dispatch(courseActions.createCourse(course))}
+       actions :bindActionCreators(courseActions, dispatch)
+    });
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(CoursesPage);
+ ----------------------------------------------------------------
+
+ CoursesPage.propTypes = {
+   // dispatch: PropTypes.func.isRequired,
+    courses: PropTypes.array.isRequired,
+   createCourse: PropTypes.func.isRequired
+};
+ ----------------------------------------------------------------
+ difference between hashhistory and browserhistory
+------------------------------------------------------------------
+  <Route path="/view/:postId" component={Single}/>
+------------------------------------------------------------------
+  import {routerReducer} from 'react-router-redux';
+  const rootReducer = combineReducers({ posts, comments, routing: routerReducer}) ;
+------------------------------------------------------------------
+  import {createStore,compose} from 'redux';
+------------------------------------------------------------------
+  import {syncHisrtoryWithStore} from 'react-router-redux';
+  export const history =syncHisrtoryWithStore(browserHistory,store);
+------------------------------------------------------------------
+in console :
+$r
+$r.store
+$r.store.getState();
+------------------------------------------------------------------
+$r.store.dispatch({type:'INCREMENT_LIKES',index:0});
+------------------------------------------------------------------
+<pre>
+	{JSON.stringify(this.props.posts,null, ' ')}
+</pre>
+------------------------------------------------------------------
+<button onClick={this.props.increment.bind(null,i)} className="likes">&hearts; {post.likes}</button>     
+------------------------------------------------------------------
+const { postId} = this.props.params;
+// to derive the url code
+------------------------------------------------------------------
+  return [
+                ...state.slice(0,i),//before the one we are updating
+                {...state[i], likes : state[i].likes + 1},
+                ...state.slice(i+1),// after the one we are updating
+ ];
+ ------------------------------------------------------------------
+const i = this.props.posts.findIndex((post) => post.code === postId);
+------------------------------------------------------------------
+const postComments= this.props.comments[postId] || [];
+------------------------------------------------------------------
+<Photo i={i} post={post} {...this.props}/>
+------------------------------------------------------------------
+ <button className="remove-comment">&times;</button>
+------------------------------------------------------------------
+ <form ref="commentForm" className="comment-form">
+                    <input type="text" ref="author" placeholder="author"/>
+                    <input type="text" ref="comment" placeholder="comment"/>
+                    <input type="submit" hidden/>
+ </form>
+------------------------------------------------------------------
+<CSSTransitionGroup transitionName="like" transitionEnterTimeout={500} transitionLeaveTimeout={500}>
+                        <span key={post.likes} className="likes-heart">{post.likes}</span>
+/CSSTransitionGroup>
+------------------------------------------------------------------
+<Link className="button" to={`/view/${post.code}`}>
+                            <span className="comment-count">
+                                <span className="speech-bubble"></span>
+                                {comments[post.code] ? comments[post.code].length : 0}
+                            </span>
+</Link>
+------------------------------------------------------------------
+<Link to={`/view/${post.code}`}>
+                        <img src={post.display_src} alt={post.caption} className="grid-photo" />
+</Link>
+------------------------------------------------------------------
+reducer composition
+if a slice of the state is given to a child component , it know how to update just that slice.
+------------------------------------------------------------------

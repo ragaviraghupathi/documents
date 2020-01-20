@@ -1,0 +1,110 @@
+.pre-scrollable
+<pre class="pre-scrollable">Text in a pre element
+  is displayed in a fixed-width
+  font, and it preserves
+  both      spaces and
+  line breaks.</pre>
+----------------------------------------------------------------------
+<p class="bg-primary">This text is important.</p>
+  <p class="bg-success">This text indicates success.</p>
+  <p class="bg-info">This text represents some information.</p>
+  <p class="bg-warning">This text represents a warning.</p>
+  <p class="bg-danger">This text represents danger.</p>
+----------------------------------------------------------------------
+ <p class="text-muted">This text is muted.</p>
+  <p class="text-primary">This text is important.</p>
+  <p class="text-success">This text indicates success.</p>
+  <p class="text-info">This text represents some information.</p>
+  <p class="text-warning">This text represents a warning.</p>
+  <p class="text-danger">This text represents danger.</p>
+----------------------------------------------------------------------
+.table
+.table-striped
+.table-bordered
+.table-hover
+.table-condensed
+----------------------------------------------------------------------
+.table-responsive : horizontal scrollbar on responsive design
+<div class="table-responsive">          
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Age</th>
+        <th>City</th>
+        <th>Country</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Anna</td>
+        <td>Pitt</td>
+        <td>35</td>
+        <td>New York</td>
+        <td>USA</td>
+      </tr>
+    </tbody>
+  </table>
+ </div>
+----------------------------------------------------------------------
+ .img-rounded
+ .img-circle
+ .img-thumbnail
+ .img-responsive
+----------------------------------------------------------------------
+ <div class="thumbnail">
+      <a href="/w3images/lights.jpg">
+        <img src="/w3images/lights.jpg" alt="Lights" style="width:100%">
+        <div class="caption">
+          <p>Lorem ipsum...</p>
+        </div>
+      </a>
+    </div>
+----------------------------------------------------------------------
+
+    <div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+  </div>
+  ----------------------------------------------------------------------
+  .page-header(div)
+ ----------------------------------------------------------------------
+  .jumbotron(div)
+ ----------------------------------------------------------------------
+  .well rounded border around an element with a gray background color and some padding
+  .well well-sm(div)
+  .well well-lg
+ ----------------------------------------------------------------------
+  .alert class, followed by one of the four contextual classes .alert-success, .alert-info, .alert-warning or .alert-danger(div)
+ ----------------------------------------------------------------------
+<div class="alert alert-success">
+    <strong>Success!</strong> You should <a href="#" class="alert-link">read this message</a>.
+  </div>
+ ----------------------------------------------------------------------
+ <div class="alert alert-success alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> This alert box could indicate a successful or positive action.
+  </div>
+  ----------------------------------------------------------------------
+  for passing boolean values
+  <a href= "/" active={true} />
+  or 
+  <a href= "/" active/> both are same
+  ----------------------------------------------------------------------
+  for creating dumb component :
+  const componentName = (props) =>{
+  return();
+  };
+  or
+  const componentName = (props) => (
+    <div> </div>
+  );
+  or
+  const componentName =() => (
+    <div> </div>
+  );
+  ----------------------------------------------------------------------
+
+  

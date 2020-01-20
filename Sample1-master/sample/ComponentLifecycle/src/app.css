@@ -1,0 +1,16 @@
+.table1{
+    
+  border: 1px solid black;
+}
+th{
+    
+  border: 1px solid black;
+
+}
+td{
+    
+  border: 1px solid black;
+
+} 
+.table1 tr:nth-child(even){background-color:fuchsia;}
+.table1 tr:nth-child(odd){background-color: orange;}

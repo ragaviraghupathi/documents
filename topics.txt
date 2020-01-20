@@ -1,0 +1,31 @@
+Polyfill
+web compnents (html5)
+ember, angular,vue
+
+why react?
+ 1)Lightweigt:can be used on legacy apps.
+ 2)Stability:the components that are created in much earlier versions of React will likely continue to work today with 
+very minimal tweaks.
+
+jest:
+Jest is a JavaScript testing framework designed to ensure correctness of any JavaScript codebase. It allows you to write 
+tests with an approachable, familiar and feature-rich API that gives you results quickly. Jest is well-documented,
+ requires little configuration and can be extended to match your requirements.”
+
+Testing Library:
+“the Testing Library family of libraries is a very light-weight solution for testing without all the implementation 
+details. The main utilities it provides involve querying for nodes similarly to how users would find them. In this way, 
+testing-library helps ensure your tests give you confidence in your UI code.” Their philosophy is that “the more your 
+tests resemble the way your software is used, the more confidence they can give you”.
+
+Cypress:
+Cypress is an end-to-end (e2e) “test runner built for humans”, with tests that “are easy to read and understand” and can 
+be run in your browser and “run as fast as your browser can render”. Finally, Cypress provides “readable error messages 
+[that] help you to debug quickly”
+
+Jest and Testing Library are typically what you might refer to as Unit Testing and Integration Testing libraries, whereas
+ Cypress is typically used for End-To-End (e2e) testing.
+This means that you would test your application from start to finish, as if you were a user using your application 
+(with all the clicks and page navigations included and so on).
+
+https://medium.com/javascript-in-plain-english/i-tested-a-react-app-with-jest-testing-library-and-cypress-here-are-the-differences-3192eae03850
